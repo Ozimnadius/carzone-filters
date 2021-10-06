@@ -1,0 +1,239 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+
+        title Page
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.theme.min.css")
+        link(rel='stylesheet' href='css/main.css')
+    body
+        style.
+            body {
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.5);
+                margin: 0;
+
+                display: flex;
+                align-items: center;
+            }
+
+            .container {
+                max-width: 1260px;
+                margin: 0 auto;
+                width: 100%;
+            }
+        .container
+            form.filters
+                -
+                    var list = [
+                        {
+                            name: "mark",
+                            placeholder: "Марка",
+                            list: [
+                                {
+                                    name: "",
+                                    val:"",
+                                },
+                                {
+                                    name: "lorem1",
+                                    val:"lorem1"
+                                },
+                                {
+                                    name: "lorem2",
+                                    val:"lorem2"
+                                },
+                                {
+                                    name: "lorem3",
+                                    val:"lorem3"
+                                },
+                                {
+                                    name: "lorem4",
+                                    val:"lorem4"
+                                },
+                                {
+                                    name: "lorem5",
+                                    val:"lorem5"
+                                },
+                                {
+                                    name: "lorem6",
+                                    val:"lorem6"
+                                },
+                                {
+                                    name: "lorem7",
+                                    val:"lorem7"
+                                },
+                                {
+                                    name: "lorem8",
+                                    val:"lorem8"
+                                },
+                                {
+                                    name: "lorem9",
+                                    val:"lorem9"
+                                },
+
+                            ]
+                        },
+                        {
+                            name: "series",
+                            placeholder: "Серия",
+                            list: [
+                                {
+                                    name: "",
+                                    val:""
+                                },
+                                {
+                                    name: "lorem1",
+                                    val:"lorem1"
+                                },
+                                {
+                                    name: "lorem2",
+                                    val:"lorem2"
+                                },
+                                {
+                                    name: "lorem3",
+                                    val:"lorem3"
+                                },
+                                {
+                                    name: "lorem4",
+                                    val:"lorem4"
+                                },
+                                {
+                                    name: "lorem5",
+                                    val:"lorem5"
+                                },
+                                {
+                                    name: "lorem6",
+                                    val:"lorem6"
+                                },
+                                {
+                                    name: "lorem7",
+                                    val:"lorem7"
+                                },
+                                {
+                                    name: "lorem8",
+                                    val:"lorem8"
+                                },
+                                {
+                                    name: "lorem9",
+                                    val:"lorem9"
+                                },
+
+                            ]
+                        },
+                        {
+                            name: "engine",
+                            placeholder: "Тип двигателя",
+                            list: [
+                                {
+                                    name: "",
+                                    val:""
+                                },
+                                {
+                                    name: "lorem1",
+                                    val:"lorem1"
+                                },
+                                {
+                                    name: "lorem2",
+                                    val:"lorem2"
+                                },
+                                {
+                                    name: "lorem3",
+                                    val:"lorem3"
+                                },
+                                {
+                                    name: "lorem4",
+                                    val:"lorem4"
+                                },
+                                {
+                                    name: "lorem5",
+                                    val:"lorem5"
+                                },
+                                {
+                                    name: "lorem6",
+                                    val:"lorem6"
+                                },
+                                {
+                                    name: "lorem7",
+                                    val:"lorem7"
+                                },
+                                {
+                                    name: "lorem8",
+                                    val:"lorem8"
+                                },
+                                {
+                                    name: "lorem9",
+                                    val:"lorem9"
+                                },
+
+                            ]
+                        },
+                        {
+                            name: "volume",
+                            placeholder: "Объем двигателя",
+                            list: [
+                                {
+                                    name: "",
+                                    val:""
+                                },
+                                {
+                                    name: "lorem1",
+                                    val:"lorem1"
+                                },
+                                {
+                                    name: "lorem2",
+                                    val:"lorem2"
+                                },
+                                {
+                                    name: "lorem3",
+                                    val:"lorem3"
+                                },
+                                {
+                                    name: "lorem4",
+                                    val:"lorem4"
+                                },
+                                {
+                                    name: "lorem5",
+                                    val:"lorem5"
+                                },
+                                {
+                                    name: "lorem6",
+                                    val:"lorem6"
+                                },
+                                {
+                                    name: "lorem7",
+                                    val:"lorem7"
+                                },
+                                {
+                                    name: "lorem8",
+                                    val:"lorem8"
+                                },
+                                {
+                                    name: "lorem9",
+                                    val:"lorem9"
+                                },
+
+                            ]
+                        },
+                    ];
+                .filters__list
+                    each filter in list
+                        .filters__item
+                            select(name=filter.name data-placeholder=filter.placeholder).filter
+                                each i in filter.list
+                                    option(value=i.value)= i.name
+                            a(href="#").filters__item-reset.jsFilterReset
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.9673 1.90329L13.5573 0.493286L7.96729 6.08329L2.37729 0.493286L0.967285 1.90329L6.55729 7.49329L0.967285 13.0833L2.37729 14.4933L7.96729 8.90329L13.5573 14.4933L14.9673 13.0833L9.37729 7.49329L14.9673 1.90329Z" fill="white"/>
+                                </svg>
+
+                .filters__btns
+                    button(type='submit').filters__submit.filters__btn
+                        span ПОКАЗАТЬ
+                    button(type='reset').filters__reset.filters__btn.jsFormReset
+                        span СБРОСИТЬ
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+        //script(src="js/select.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.min.js")
+        script(src='js/script.js')
